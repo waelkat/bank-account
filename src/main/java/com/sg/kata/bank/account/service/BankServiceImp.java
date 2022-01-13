@@ -32,8 +32,11 @@ public class BankServiceImp implements BankService, InitializingBean {
 
 	@Override
 	public Client getClientWithID(Integer clientID) {
+		if(clientID == null) {
+			return null;
+		}
 		return listClient.stream()
-				.filter(client -> clientID == client.getClientID())
+				.filter(client -> clientID.equals(client.getClientID()))
 				.findAny().orElse(null);
 	}
 
