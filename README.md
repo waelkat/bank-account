@@ -1,4 +1,5 @@
 # bank-account
+Required Java 8 installed
 To execute the Application under spring boot server, run the following command in a cmd under the full directory: 
 
 `mvnw spring-boot:run`
